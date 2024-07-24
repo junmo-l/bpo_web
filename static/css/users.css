@@ -1,0 +1,501 @@
+body {
+    background-color: #ececf1;
+    overflow-x: hidden;
+}
+
+.users-edit-closed-child {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 90%;
+    height: 71px;
+}
+.users-logo {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    width: 57px;
+    height: 28px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.users-management {
+    position: absolute;
+    top: 42px;
+    left: 288px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 329px;
+    height: 29px;
+}
+.base-table-simple-sorting-child {
+    position: absolute;
+    top: 92px;
+    left: 2px;
+    max-height: 100%;
+    width: 203px;
+}
+
+.user-info-title-wrapper {
+    width: 230px;
+    position: relative;
+    height: 49px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+#fullname {
+    font-size: 16px;
+    width: 250px;
+    word-wrap: break-word; /* 긴 단어를 줄바꿈 */
+    white-space: normal; /* 여러 줄로 표시 */
+    line-height: 1.2; /* 줄 간격 조정 */
+}
+input.user-info-title {
+    border: #fff;  /* 테두리 색상을 투명으로 설정 */
+    align-self: center;
+    align-items: center;  /* 자식 요소 내에서 수직 가운데 정렬 */
+    justify-content: flex-start;
+    height: 100%;  /* 부모 컨테이너의 높이에 맞추기 */
+    box-sizing: border-box;
+    color: #535180;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #ffffff;
+    padding-left: 0;
+}
+
+.user-info-title {
+    position: absolute;
+    top: 7px;
+    left: 18px;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+}
+
+.user-info-value-wrapper {
+    width: 674px;
+    position: relative;
+    height: 49px;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #373737;
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.user-info-title-row {
+    align-self: stretch;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.25);
+    border-bottom: 0.3px solid #fff;
+    box-sizing: border-box;
+    height: 45px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  /* 부모 컨테이너 내에서 수직 가운데 정렬 */
+    justify-content: flex-start;
+    padding: 0px 0px 0px 10px;
+    width: 50%;
+}
+
+.user-info-value {
+    align-self: center;
+    box-sizing: border-box;
+    height: 45px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  /* 자식 요소 내에서 수직 가운데 정렬 */
+    justify-content: flex-start;
+    padding: 0px 10px;
+    width: 50%;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: "Inter";
+    color: black;
+    border: #fff;
+    font-weight: 500;
+}
+
+input.user-info-value,
+select.user-info-value,
+#last-attempt-time {
+    border: #fff;  /* 테두리 색상을 투명으로 설정 */
+    align-self: center;
+    align-items: center;  /* 자식 요소 내에서 수직 가운데 정렬 */
+    justify-content: flex-start;
+    height: 20px;  /* 부모 컨테이너의 높이에 맞추기 */
+    box-sizing: border-box;
+    padding: 0 10px;
+    color: black;
+    font-weight: 500;
+}
+
+#authority-select.user-info-value {
+    color: black;  /* 텍스트 컬러를 원하는 색상으로 변경 */
+    font-family: "Inter";
+    font-weight: 500;
+    position: relative; /* 위치 설정 */
+}
+
+#authority-select.edit-mode {
+    background-image: url('/static/images/Dropdown = Default.png'); /* 체크 표시 아이콘 설정 */
+    background-repeat: no-repeat; /* 아이콘 반복 제거 */
+    background-position: right 10px center; /* 아이콘 위치 설정 */
+    background-size: 1em; /* 아이콘 크기 설정 */
+}
+
+#authority-select.edit-mode.open {
+    background-image: url('/static/images/Dropdown = Selected.png'); /* 체크 표시 아이콘 설정 */
+}
+
+.user-info-value.editable, #username-input.editable {
+    position: absolute;
+    width: 50%;
+    position: relative;
+    box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 0.5px solid #a39e9e;
+    box-sizing: border-box;
+    height: 32px;
+    font-size: 14px;
+    font-family: "Inter";
+    color: black;
+    padding: 0px 0px 0px 9px;
+    font-weight: 500;
+}
+
+.user-info-value.editable:focus, #username-input.editable:focus {
+    outline: none;
+}
+
+.user-info-value.editable.required-fields-error,
+#username-input.editable.required-fields-error {
+    border: 1px solid #F74444;
+}
+
+.dashboard-list {
+    position: absolute;
+    top: 7px;
+    left: 18px;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 155px;
+    height: 35px;
+}
+.check-box-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+.check-box {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.check-box-child {
+    height: 20px;
+    width: 20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.check-box-child:checked {
+    background-color: #ffffff;
+}
+
+.check-box-child:checked::after {
+    content: "";
+    position: absolute;
+    left: 11.5px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #9896C4;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.dashboard-value {
+    width: 294px;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    height: 25px;
+    flex-shrink: 0;
+    font-weight: 500;
+}
+.frame-parent {
+    position: absolute;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.row-inner {
+    width: 273px;
+    position: relative;
+    height: 422px;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #373737;
+}
+.user-info-dashboard-row {
+    align-self: stretch;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.25);
+    border-bottom: 0.3px solid #fff;
+    box-sizing: border-box;
+    height: 331.2px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 0px 10px;
+}
+.row-parent {
+    position: absolute;
+    top: 50px;
+    left: 205px;
+    width: 1548px;
+    height: 447px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.top-nav-button-line {
+    position: absolute;
+    top: 7px;
+    left: 16px;
+    width: 124px;
+    height: 16px;
+}
+.top-nav-button-wrapper {
+    position: absolute;
+    top: -1px;
+    left: -3px;
+    width: 141px;
+    height: 30px;
+    overflow: hidden;
+}
+.top-nav-users {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.top-nav-users-wrapper {
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 23.5px);
+    width: 47px;
+    height: 31px;
+}
+.top-nav-parent {
+    width: 121px;
+    position: relative;
+    height: 29px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.top-nav-user-list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-nav-user-list-wrapper {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 36.5px);
+    width: 74px;
+    height: 31px;
+}
+.top-nav-userlist-wrapper {
+    width: 121px;
+    position: relative;
+    height: 31px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+}
+.top-nav-dashboard {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+}
+.top-nav-button-wrapper {
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 39.5px);
+    width: 80px;
+    height: 31px;
+}
+.frame-group {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.25);
+    width: 531px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    gap: 1px;
+    font-size: 16px;
+}
+.base-table-simple-sorting {
+    position: absolute;
+    top: 0px;
+    left: 50.56%;
+    transform: translateX(-50%);
+    border-radius: 18px;
+    background-color: #fff;
+    width: 98.55%;
+    height: 99%;
+}
+.base-table-simple-sorting-parent {
+    position: absolute;
+    top: 102px;
+    left: 74px;
+    width: 1753px;
+    height: 901px;
+}
+/* 서치기능 추후 추가 */
+/* .search-icon {
+    position: absolute;
+    height: 1.55%;
+    width: 0.8%;
+    top: 75px;
+    right: 98.23%;
+    bottom: 91.68%;
+    left: 0.97%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.search {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
+}
+.search-bar {
+    position: absolute;
+    top: 162px;
+    left: 116px;
+    width: 77px;
+    height: 17px;
+} */
+.users-edit-closed {
+    width: 95%;
+    position: relative;
+    background-color: #ececf1;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #535180;
+    font-family: Inter;
+}
+
+.button-container {
+    position: absolute;
+    top: 12px;
+    left: 1630px;
+    height: 22px;
+    width: 24px;
+    display: flex;
+    gap: 5px;
+    transition: right 0.3s ease; 
+    cursor: pointer;
+}
+
+/* Nav-bar가 없을 때 */
+body:not(.header-visible) .users-edit-closed {
+    width: 100%;
+}
+
+/* Nav-bar가 있을 때 */
+body.header-visible .users-edit-closed-child {
+    width: 90.8%;
+}
+
+body.header-visible .users-edit-closed {
+    margin-left: 375px;
+    width: calc(100% - 375px);
+}
+
+body.header-visible .base-table-simple-sorting {
+    width: 80%;
+    left: 39.9%;
+}
+
+body.header-visible .columns {
+    width: 90.8%;
+}
+
+body.header-visible .status-wrapper {
+    width: 35.5%;
+}
+
+body.header-visible .active-wrapper {
+    width: 50%;
+    text-align: left;
+}
+
+body.header-visible .active {
+    width: 50%;
+}
+
+body.header-visible .button-container {
+    left: 1300px; 
+}

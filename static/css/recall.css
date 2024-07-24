@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, body {
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    overflow: hidden; /* 스크롤 바 숨기기 */
+
+}
+.main-banner-1-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 2130px;
+  	height: 1334px;
+  	object-fit: cover;
+	z-index: 0; /* 이미지 아래에 위치하도록 설정 */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2130px;
+    height: 1334px;
+    background-color: rgba(0, 0, 0, 0.5); /* 검은색 배경, 투명도 50% */
+    z-index: 1; /* 다른 요소들 위에 표시되도록 설정 */
+}
+
+.samsung-orig-wordmark-white-rg-icon {
+  	position: absolute;
+  	top: 44px;
+  	left: 178px;
+  	width: 183px;
+  	height: 48px;
+  	object-fit: cover;
+}
+.we-are-ready {
+  	position: absolute;
+  	top: 253px;
+  	left: 178px;
+  	font-size: 63px;
+  	font-weight: 600;
+  	display: inline-block;
+  	width: 1214px;
+  	height: 58px;
+}
+.home {
+  	position: absolute;
+  	top: 51px;
+  	left: 1271px;
+  	letter-spacing: -0.03em;
+  	display: inline-block;
+  	width: 98px;
+  	height: 58px;
+}
+.providing-next-level {
+  	position: absolute;
+  	top: 335px;
+  	left: 178px;
+  	letter-spacing: -0.03em;
+  	display: inline-block;
+  	width: 714px;
+  	height: 58px;
+}
+.product-no {
+  	position: absolute;
+  	top: 469px;
+  	left: 178px;
+  	letter-spacing: -0.03em;
+  	display: inline-block;
+  	width: 714px;
+  	height: 38px;
+}
+.serial-no {
+  	position: absolute;
+  	top: 555px;
+  	left: 178px;
+  	letter-spacing: -0.03em;
+  	display: inline-block;
+  	width: 714px;
+  	height: 38px;
+}
+.last-name {
+  	position: absolute;
+  	top: 641px;
+  	left: 178px;
+  	letter-spacing: -0.03em;
+  	display: inline-block;
+  	width: 714px;
+  	height: 38px;
+}
+.hidden-input1 {
+    margin-left: 20px;
+    border: none; /* 테두리 제거 */
+    background-color: transparent; /* 배경 투명 */
+    color: transparent; /* 글자 색 투명 */
+    width: 400px; /* 너비를 400px로 변경 */
+    font-size: 20px; /* 글자 크기를 18px로 설정 */
+    transition: color 0.3s, border 0.3s; /* 부드러운 전환 효과 */
+}
+.hidden-input2 {
+    margin-left: 45px;
+    border: none; /* 테두리 제거 */
+    background-color: transparent; /* 배경 투명 */
+    color: transparent; /* 글자 색 투명 */
+    width: 400px; /* 너비를 400px로 변경 */
+    font-size: 20px; /* 글자 크기를 18px로 설정 */
+    transition: color 0.3s, border 0.3s; /* 부드러운 전환 효과 */
+}
+.hidden-input3 {
+    margin-left: 30px;
+    border: none; /* 테두리 제거 */
+    background-color: transparent; /* 배경 투명 */
+    color: transparent; /* 글자 색 투명 */
+    width: 400px; /* 너비를 400px로 변경 */
+    font-size: 20px; /* 글자 크기를 18px로 설정 */
+    transition: color 0.3s, border 0.3s; /* 부드러운 전환 효과 */
+}
+
+.product-no:hover .hidden-input1,
+.serial-no:hover .hidden-input2,
+.last-name:hover .hidden-input3 {
+    color: black; /* 마우스를 올리면 글자 색을 검정으로 변경 */
+    background-color: rgba(255, 255, 255, 0.8); /* 배경색 추가 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    padding: 5px; /* 패딩 추가 */
+    font-size: 20px; /* hover 시 글자 크기를 동일하게 유지 */
+}
+.vector-icon {
+	position: absolute;
+	top: 468px;
+	left: 315px;
+	max-width: 100%;
+	overflow: hidden;
+	height: 32.5px;
+	}
+.vector-icon2 {
+	position: absolute;
+	top: 555px;
+	left: 315px;
+	max-width: 100%;
+	overflow: hidden;
+	height: 32.5px;
+}
+
+.vector-icon3 {
+	position: absolute;
+	top: 640px;
+	left: 315px;
+	max-width: 100%;
+	overflow: hidden;
+	height: 32.5px;
+	}
+		
+
+.samsung-page-submit-white-child {
+  	position: absolute;
+  	top: 510.5px;
+  	left: 178.5px;
+  	max-height: 100%;
+  	width: 873.5px;
+}
+.samsung-page-submit-white-item {
+  	position: absolute;
+  	top: 598px;
+  	left: 178px;
+  	max-height: 100%;
+  	width: 873.5px;
+}
+.samsung-page-submit-white-inner {
+  	position: absolute;
+  	top: 683px;
+  	left: 178px;
+  	max-height: 100%;
+  	width: 873.5px;
+}
+.rectangle-div {
+    position: absolute;
+    top: 746px; /* 상단 위치 */
+    left: 174px; /* 좌측 위치 */
+    border-radius: 14px;
+    background-color: #fff;
+    width: 150px; /* 너비 설정 */
+    height: 50px; /* 높이 설정 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    transition: background-color 0.3s; /* 부드러운 전환 효과 */
+}
+.rectangle-div:hover {
+    background-color: black; /* hover 시 배경색 변경 */
+}
+.search-icon-container {
+    display: inline-block; /* 이미지를 가로로 나란히 배치 */
+}
+.submit {
+	margin-left: 20px;
+    font-size: 22px; /* 글자 크기 */
+    letter-spacing: -0.03em; /* 글자 간격 */
+    font-weight: 600; /* 글자 두께 */
+    color: #2c0d0d; /* 글자 색 */
+    width: 100%; /* 너비를 부모 요소에 맞춤 */
+    height: 100%; /* 높이를 부모 요소에 맞춤 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+	transition: color 0.3s; /* 부드러운 전환 효과 */
+}
+.rectangle-div:hover .submit {
+    color: white; /* hover 시 텍스트 색상 변경 */
+}
+
+
+.search-outline-icon {
+  	position: absolute;
+  	top: 759px;
+  	left: 191px;
+  	width: 24px;
+  	height: 24px;
+  	overflow: hidden;
+}
+.samsung-page-submit-white {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 1080px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 24px;
+  	color: #fff;
+  	font-family: Inter;
+	
+}
+.samsung-orig-wordmark-white-rg-icon,
+.we-are-ready,
+.home,
+.providing-next-level,
+.product-no,
+.serial-no,
+.last-name,
+.contact-us,
+.about-us,
+.samsung-page-submit-white-child,
+.samsung-page-submit-white-item,
+.samsung-page-submit-white-inner,
+.rectangle-div,
+.submit,
+.search-outline-icon {
+    position: absolute;
+    z-index: 2; /* 모든 요소들이 오버레이 위에 위치하도록 설정 */
+}

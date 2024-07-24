@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    background-color: #ececf1;
+    overflow-x: hidden;
+}
+
+.user-list-closed {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ececf1;
+    text-align: left;
+    font-size: 20px;
+    color: #535180;
+    font-family: Inter;
+}
+
+.user-list-closed-child {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: #fff;
+    width: 90%;
+    height: 71px;
+}
+
+.user-list-logo {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 57px;
+    height: 28px;
+    }
+
+.user-list-management {
+    position: absolute;
+    top: 42px;
+    left: 288px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 329px;
+    height: 29px;
+}
+
+.top-nav-button-wrapper {
+    position: absolute;
+    top: -1px;
+    left: -3px;
+    width: 141px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.top-nav-button-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-nav-button-wrapper a:hover,
+.top-nav-button-wrapper a:active,
+.top-nav-button-wrapper a:focus {
+    text-decoration: none;
+    color: inherit;
+}  
+
+.top-nav-users {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    color: #535180;
+}
+
+.top-nav-users-wrapper {
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 23.5px);
+    width: 47px;
+    height: 31px;
+}
+
+.top-nav-button-container {
+    width: 121px;
+    position: relative;
+    height: 29px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.top-nav-user-list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-nav-user-list-wrapper {
+    width: 121px;
+    position: relative;
+    height: 31px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.button-users-group {
+    width: 121px;
+    position: relative;
+    height: 29px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.top-nav-dashboard-wrapper {
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 39.5px);
+    width: 80px;
+    height: 31px;
+}
+
+.top-nav-dashboard {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    color: #535180;
+}
+
+.top-nav-dashboard-container {
+    width: 121px;
+    position: relative;
+    height: 29px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.frame-parent {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.25);
+    width: 531px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    gap: 1px;
+}
+
+.all-check-box {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.all-check-box-child {
+    position: absolute;
+    height: 45%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* 체크박스가 선택되었을 때의 스타일 */
+.all-check-box:checked + .all-check-box-child {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    height: 45%;
+    width: 40%;
+}
+
+/* 체크 표시 추가 */
+.all-check-box:checked + .all-check-box-child::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #9896C4;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.all-check-box-wrapper {
+    width: 53px;
+    position: relative;
+    border-radius: 5px 0px 0px 0px;
+    background-color: rgba(240, 234, 234, 0.56);
+    height: 47px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.username-title {
+    position: absolute;
+    top: calc(50% - 9.5px);
+    left: 10px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 97px;
+    height: 20px;
+}
+
+.username-title-wrapper,
+.authority-title-wrapper {
+    width: 189px;
+    position: relative;
+    background-color: rgba(240, 234, 234, 0.56);
+    height: 47px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+#authority-title-wrapper {
+    width: 150px;
+}
+
+.authority-title {
+    position: absolute;
+    top: calc(50% - 9.5px);
+    left: calc(50% - 48.5px);
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 20px;
+}
+
+.group-title {
+    position: absolute;
+    top: calc(50% - 9.5px);
+    left: calc(50% - 54.5px);
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 20px;
+}
+
+.group-title-wrapper {
+    width: 130px;
+    position: relative;
+    background-color: rgba(240, 234, 234, 0.56);
+    height: 47px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.last-access-time-title {
+    position: absolute;
+    top: calc(50% - 9.5px);
+    left: calc(50% - 70.5px);
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 20px;
+}
+
+.last-access-time-title-wrapper {
+    width: 189px;
+    position: relative;
+    border-radius: 0px 5px 0px 0px;
+    background-color: rgba(240, 234, 234, 0.56);
+    height: 47px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.dashboard-title {
+    position: absolute;
+    top: calc(50% - 9.5px);
+    left: calc(50% - 84.5px);
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 20px;
+}
+
+.dashboard-title-wrapper {
+    width: 780px;
+    position: relative;
+    border-radius: 0px 5px 0px 0px;
+    background-color: rgba(240, 234, 234, 0.56);
+    height: 47px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-list-tabel {
+    position: absolute;
+    top: 45px;
+    left: 205px;
+    width: 1400px;
+    height: 47px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 13px;
+    color: #474747;
+}
+
+.base-table-simple-sorting-item {
+    position: absolute;
+    top: 112px;
+    left: 242px;
+    width: 809px;
+    height: 57px;
+    overflow: hidden;
+}
+
+.frame-child {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+} 
+
+.check-box-child {
+    position: absolute;
+    height: 37%;
+    width: 37%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    cursor: pointer;
+} 
+
+/* 체크박스가 선택되었을 때의 스타일 */
+.frame-child:checked + .check-box-child {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* 체크 표시 추가 */
+.frame-child:checked + .check-box-child::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6.8px;
+    width: 5px;
+    height: 10px;
+    border: solid #9896C4;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    /* background-color: #9896C4; */
+}
+
+.user-list-roe-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 54px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.username-value {
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 101px;
+    height: 21px;
+}
+
+.username-value-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 54px;
+    width: 189px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.email-value {
+    position: absolute;
+    top: 23px;
+    left: 9px;
+    font-size: 10px;
+    line-height: 16px;
+    color: #8c8c8c;
+    display: flex;
+    align-items: center;
+    width: 166px;
+    height: 21px;
+}
+
+.authority-value {
+    position: absolute;
+    top: 18px;
+    left: 34px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 21px;
+}
+
+.authority-value-wrapper {
+    position: absolute;
+    top: -1px;
+    left: 243px;
+    width: 150px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.dept-value {
+    position: absolute;
+    top: 50%; /* 부모 요소의 세로 중앙 */
+    left: 50%; /* 부모 요소의 가로 중앙 */
+    transform: translate(-50%, -50%); /* 자신의 크기만큼 이동하여 정확한 중앙에 위치 */
+    line-height: 16px;
+    font-weight: 500;
+    width: 70px;
+    height: 21px;
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.dept-value-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 382px;
+    width: 110px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.last-access-time-value {
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 139px;
+    height: 21px;
+}
+
+.last-access-time-value-wrapper {
+    position: absolute;
+    top: -1px;
+    left: 550px;
+    width: 189px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.dashboard-value {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px; /* 각 항목 사이의 간격 */
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.dashboard-value-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 750px;
+    margin-left: 710px; /* 부모 요소로부터의 좌측 위치 */
+}
+
+.dashboard-value-span {
+    white-space: nowrap; /* 개별 항목의 줄 바꿈 방지 */
+}
+
+.dashboard-value-separator-span {
+    white-space: nowrap; /* 구분 기호의 줄 바꿈 방지 */
+    color: rgb(153, 147, 147);
+}
+
+.user-list-roe {
+    width: 1491px;
+    position: relative;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.25);
+    border-bottom: 0.5px solid #fff;
+    box-sizing: border-box;
+    min-height: 57px; /* 최소 높이를 설정하여 기본 높이 유지 */
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.user-list-roe:hover {
+    background-color: #F1F1F1;
+}
+
+.user-list-roe-parent {
+    position: absolute;
+    top: 92px;
+    left: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1px;
+    font-size: 12px;
+    color: #1f1f1f;
+    max-height: 800px; 
+    overflow-y: auto; 
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    /* max-height: calc(100% - 92px); */
+}
+
+/* 스크롤바 스타일링 */
+.user-list-roe-parent::-webkit-scrollbar {
+    width: 4px;  /* 스크롤바의 너비 */
+}
+
+.user-list-roe-parent::-webkit-scrollbar-thumb {
+    background: #c9c9cf; /* 스크롤바의 색상 */
+    border-radius: 10px; /* 스크롤바의 둥근 모서리 */
+}
+
+.user-list-roe-parent::-webkit-scrollbar-track {
+    background: #ffffff; /* 스크롤바 트랙의 배경색 */
+}
+
+.scroller {
+    position: absolute;
+    height: calc(100% - 16px);
+    top: 8px;
+    bottom: 8px;
+    left: calc(50% - 2px);
+    border-radius: 10px;
+    background-color: rgba(188, 188, 198, 0.5);
+    width: 5px;
+}
+
+.scrollbar {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    width: 10px;
+    height: 210px;
+}
+
+.scrollbar-scol {
+    position: absolute;
+    width: 0.74%;
+    top: 95px;
+    right: 1.71%;
+    left: 97.55%;
+    height: 332px;
+}
+
+.button-container {
+    position: absolute;
+    top: 12px;
+    left: 1664x; /* 필요한 경우 조정 */
+    display: flex;
+    gap: 5px; /* 버튼 사이 간격 */
+    transition: right 0.3s ease; /* 애니메이션 추가 */
+}
+
+.button-add, .button-delete, .button-edit {
+    width: 24px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.button-delete {
+    display: none; 
+}
+
+.base-table-simple-sorting {
+    position: absolute;
+    top: 0px;
+    left: 48%;
+    transform: translateX(-50%);
+    border-radius: 18px 18px 0px 18px;
+    background-color: #fff;
+    width: 93.6%;
+    height: 99%;
+}
+
+.base-table-simple-sorting-parent {
+    position: absolute;
+    top: 102px;
+    left: 74px;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 74px);
+    height: calc(100% - 102px);
+    font-size: 16px;
+}
+
+/* Search 추후 추가*/
+/* .search-bar {
+    position: relative;
+    top: 162px;
+    left: 100px;
+    width: 150px;
+    font-size: 12px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.results-container {
+    margin-top: 20px;
+    width: calc(100% - 136px); 
+    position: relative;
+    font-size: 12px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.result-username-parents {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-username {
+    width: 100%; 
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.result-email {
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} */
+
+/* Nav-bar가 없을 때 */
+body:not(.header-visible) .user-list-closed {
+    margin-left: 0;
+    width: 100%;
+    /* transition: width 0.3s ease, margin-left 0.5s ease; */
+}
+
+/* Nav-bar가 있을 때 */
+body.header-visible .user-list-closed {
+    margin-left: 375px;
+    width: calc(100% - 375px);
+    /* transition: width 0.3s ease, margin-left 0.5s ease; */
+}
+
+body.header-visible .base-table-simple-sorting {
+    left: 47.5%;
+    width: 95.3%;
+}
+
+body.header-visible .user-list-closed-child {
+    width: 90.8%;
+}
+
+body.header-visible .user-list-tabel {
+    width: 90.8%;
+}
+
+body.header-visible .dashboard-wrapper {
+    width: 35.5%;
+}
+
+body.header-visible .active-wrapper {
+    width: 50%;
+    text-align: left;
+}
+
+body.header-visible .active {
+    width: 73%;
+    top: 35%;
+    white-space: nowrap; /* 줄 바꿈 방지 */
+    gap: 5px;
+}
+
+body.header-visible .user-list-roe {
+    width: 1163px;
+}
+
+/* 네비바가 있을 때, 체크박스 클릭 시 위치 조정 */
+body.header-visible .button-container {
+    left: 1340px; /* 기본 위치로 되돌림 */
+}
+
+body.header-visible .button-container.checked {
+    left: 1310px;
+}
+
+/* 네비바가 없을 때, 체크박스 클릭 시 위치 조정 */
+body:not(.header-visible) .button-container {
+    left: 1672px; /* 기본 위치로 되돌림 */
+}
+
+body:not(.header-visible) .button-container.checked {
+    left: 1644px;
+}

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  background-color: #ECECF1;
+  background-image: url("/static/images/Welcome Page - Viewer.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.rectangle-div {
+  background-color: #ffffff;
+  margin-left: 320px;
+  /* height: 100%; */
+  /* padding-bottom: 40px; */
+  width: 1100px;
+}
+
+.dashboard {
+  padding-bottom: 10px;
+  width: 195px;
+  position: relative;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  font-family: Inter;
+  color: #535180;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 43px;
+}
+.kw-logo-2-icon {
+  margin-left: 90px;
+  /* margin-top: 150px; */
+  width: 42px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: 20px;
+  object-fit: cover;
+}
+@media (min-height: 878px){
+.container {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  margin-top: 230px;
+  margin-left: 190px;
+  }
+}
+
+@media (min-height: 978px){
+  .container {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  margin-top: 290px;
+  margin-left: 190px;
+  }
+}
+
+.gpca-logistics-trend1 {
+  position: absolute;
+  height: 44px;
+  width: 350px;
+  top: 0%;
+  left: 0%;
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: center;
+}
+
+.gpca-logistics-trend1 span {
+  margin-left: 0.5em;
+}
+
+
+.gpca-logistics-trend a {
+  text-decoration: none;
+  color: #535180; /* 기본 색상 */
+}
+
+.gpca-logistics-trend {
+  align-self: stretch;
+  position: relative;
+  height: 44px;
+  width: 440px;
+}
+ .gpca-logistics-trend-parent {
+  margin-right: 50px;
+  width: 400px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 13px;
+  text-align: left;
+  font-size: 24px;
+  color: #535180;
+  font-family: Inter;
+  
+}
+.gpca-logistics-trend-parent2 {
+  width: 400px;
+  position: relative;
+  height: 443px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 13px;
+  text-align: left;
+  font-size: 24px;
+  color: #535180;
+  font-family: Inter;
+} 
+
+.line-div {
+  padding-bottom: 10px;
+  width: 350px;
+  position: relative;
+  border-top: 1px solid rgba(83, 81, 128, 0.5);
+  box-sizing: border-box;
+  height: 1px;
+}
+
+.gpca-logistics-trend {
+  align-self: stretch;
+  position: relative;
+  height: 44px;
+}
+
+.workspace {
+  padding-bottom: 10px;
+  width: 195px;
+  position: relative;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  font-family: Inter;
+  color: #535180;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 43px;
+}
+
+
+.line-div2 {
+  padding-bottom: 10px;
+  width: 350px;
+  position: relative;
+  border-top: 1px solid rgba(83, 81, 128, 0.5);
+  box-sizing: border-box;
+  height: 1px;
+}
+
+@media (min-height: 878px) {
+  .bottom {
+    margin-top: 100px;
+    margin-left: 450px;
+  }
+}
+
+@media (min-height: 978px) {
+  .bottom {
+    margin-top: 140px;
+    margin-left: 450px;
+  }
+}
+
+
+
+.kw-international-inc {
+  width: 216px;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  font-family: Inter;
+  color: #898993;
+  white-space: pre-wrap;
+  text-align: center;
+  display: inline-block;
+}
+
+

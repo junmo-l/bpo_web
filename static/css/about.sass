@@ -1,0 +1,67 @@
+$prime-color: #272660
+$text-color: #454545
+
+
+.section-banner
+    background: url('../img/contact_banner.png')
+    background-size: cover
+    background-position: center center
+    height: 380px
+    position: relative
+    .banner-context
+        position: absolute
+        bottom: 25px
+        h1
+            font-weight: bold
+            font-size: 56px
+            color: #00aeef
+            margin: 0
+            padding: 0
+        p
+            font-weight: 500
+            
+.section-breadcrumb
+    border-top: 1px solid #eee
+    border-bottom: 1px solid #eee
+    .breadcrumb-wrapper
+        padding: 10px 0    
+        font-size: 12px
+        
+        
+.section-overview
+    padding: 30px 0
+    .overview-wrapper
+        background: white
+        box-shadow: 0 5px 20px rgba(136, 136, 136, 0.5)
+        padding: 15px 50px
+        border-radius: 5px
+        h3
+            font-weight: bold
+            position: relative
+            color: $prime-color
+            &:after
+                content: ""
+                position: absolute
+                width: 50px
+                height: 5px
+                background: $prime-color
+                bottom: -15px
+                left: 50%
+                border-radius: 4px
+                transform: translateX(-50%)
+        .ceo-img
+            margin-top: 50px
+            img
+                width: 120px
+                display: block
+                margin: 0 auto
+                border: 6px solid #ebebeb
+        .overview-content
+            margin-top: 30px
+            padding: 0 50px
+        .signature
+            margin: 50px 0
+            img
+                width: 150px
+                display: block
+                margin: 0 auto

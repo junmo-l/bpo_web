@@ -1,0 +1,330 @@
+::selection {  
+    background-color: #ececf1;
+  }
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ECECF1;
+}
+
+.login-container {
+    background-color: #ffffff;
+    text-align: center;
+    height: 1080px;
+    width: 800px;
+}
+.login-check {
+    width: 15px;
+    height: 15px;
+}
+
+.login-check.hidden {
+    display: none;
+    width: 15px;
+    height: 15px;
+}
+
+.Successful {
+    background-color: #ffffff;
+    text-align: center;
+    height: 1080px;
+    width: 800px;
+}
+.check-icon {
+    margin-top: 53%;
+    width: 39px;
+    position: relative;
+    overflow: hidden;
+    height: 39px;
+}
+.submission-successful {
+    width: 521px;
+    position: relative;
+    font-size: 24px;
+    letter-spacing: -0.05em;
+    display: flex;
+    font-family: Inter;
+    color: #797984;
+    align-items: center;
+    margin-left: 20px;
+    height: 56px;
+}
+.comment{
+    margin-left: 265px;
+}
+.comment2{
+    margin-left: 255px;
+}
+
+.net-support-will {
+    margin: 0;
+}
+
+.net-support-will-container {
+    width: 343px;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: -0.07em;
+    font-family: Inter;
+    color: #797984;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 68px;
+}
+
+
+.logo {
+    width: 72px;
+    height: 35px;
+    margin-top: 370px;
+    margin-bottom: 20px;
+}
+.logo2 {
+    margin-top: 52.5%;
+    width: 42px;
+    height: 20px;
+}
+.logo3 {
+    margin-top: 405px;
+    width: 42px;
+    height: 20px;
+}
+
+
+
+.input-container {
+    position: relative;
+    width: 280px;
+    margin-left: 225px;
+    margin-bottom: 0px;
+    color: #a0a0a0;
+}
+
+.input-container img.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.input-container input.input-field {
+    width: 100%;
+    padding: 10px 35px 10px 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-weight: 400;
+    color: #a0a0a0;
+}
+
+.input-container input.input-field.underline {
+    border-bottom: 2px solid #535180;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-container input::placeholder {
+    font-size: 14px;
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+.stay-signed-in {
+    display: flex;
+    align-items: center;
+    color: #797984;
+    font-size: 14px;
+    margin-left: 230px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.stay-signed-in label {
+    margin-left: 5px;
+}
+
+button {
+    width: 350px;
+    height: 37px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f7f7ff;
+    background-color: #535180;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6362a1;
+}
+.submit-button2 {
+    margin-top: 16px;
+    width: 350px;
+    height: 37px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f7f7ff;
+    background-color: #535180;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button2:hover {
+    background-color: #6362a1;
+}
+.error-message-container {
+    /* 공간을 잡는 부분이 아니다 */
+    /* position: absolute;  */
+    /* top: 490px; */
+    /* left: 80.7%; */
+    /* transform: translateX(-50%); */
+    text-align: center;
+    width: 100%;
+    }
+    
+.error-message {
+    font-size: 11px;
+    margin: 10px;
+    text-align: left;
+    padding-left:219px;
+    }
+
+    .error-message-container2 {
+        /* 공간을 잡는 부분이 아니다 */
+        /* position: absolute;  */
+        /* top: 490px; */
+        /* left: 80.7%; */
+        /* transform: translateX(-50%); */
+        text-align: center;
+        width: 100%;
+        }
+        
+    .error-message2 {
+        font-size: 11px;
+        margin: 10px;
+        text-align: left;
+        padding-left:219px;
+        }
+    
+.additional-links {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.additional-links a {
+    color: #797984;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.additional-links a .password-underline1 {
+    text-decoration: none;
+    margin-right: -8px;
+}
+
+.additional-links a .password-underline2 {
+    text-decoration: underline;
+    margin-left: -16px;
+}
+
+.additional-links a .username-underline {
+    text-decoration: underline;
+    margin-left: -8px;
+    margin-right: -8px
+}
+
+.additional-links a .username-underline2 {
+    text-decoration: underline;
+    margin-left: -8px;
+}
+
+.kw-international-inc {
+    /* margin-right: 540px; */
+    width: 216px;
+    margin-top: 400px;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    font-family: Inter;
+    color: #898993;
+    white-space: pre-wrap;
+    text-align: center;
+    display: inline-block;
+  }
+  .kw-international-inc2 {
+    /* margin-right: 540px; */
+    width: 100%;
+    margin-top: 45%;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    font-family: Inter;
+    color: #898993;
+    white-space: pre-wrap;
+    text-align: center;
+    display: inline-block;
+  }
+  .kw-international-inc3 {
+    /* margin-right: 540px; */
+    width: 100%;
+    margin-top: 45%;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    font-family: Inter;
+    color: #898993;
+    white-space: pre-wrap;
+    text-align: center;
+    display: inline-block;
+  }
+  .kw-international {
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    font-family: Inter;
+    color: #898993;
+    white-space: pre-wrap;
+    text-align: center;
+    display: inline-block;
+  }
+  .please-try-again {
+    margin-left: 83px;
+    width: 182px;
+    position: relative;
+    font-size: 20px;
+    text-decoration: underline;
+    letter-spacing: -0.07em;
+    font-family: Inter;
+    color: #797984;
+    display: flex;
+    align-items: center;
+    height: 24px;
+    cursor: pointer;
+}
+.user-information-not {
+    width: 521px;
+    position: relative;
+    font-size: 24px;
+    letter-spacing: -0.05em;
+    display: flex;
+    font-family: Inter;
+    color: #797984;
+    align-items: center;
+    height: 56px;
+}
+
+
