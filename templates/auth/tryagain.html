@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>User Information Not Found</title>
+</head>
+
+<body>
+    <div class="Successful">
+        <img src="{{ url_for('static', filename='images/Magnifier.png') }}" alt="Logo" class="check-icon">
+        <div class="comment2">
+            <b class="user-information-not">User Information not found</b>
+            <a href="{{ url_for('routes.forgot_username') }}">
+                <div class="please-try-again" id="pleaseTryAgain">Please try again.</div>
+            </a>
+        </div>
+        <div class="bottom">
+            <div><img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="logo3"></div>
+            <div class="kw-international">© KW International Inc All rights reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

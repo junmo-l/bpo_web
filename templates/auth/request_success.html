@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Login Form</title>
+</head>
+
+<body>
+  <div class="Successful">
+      <img src="{{ url_for('static', filename='images/check2.png') }}" alt="Logo" class="check-icon">
+      <div class="comment">
+          <b class="submission-successful">Submission Successful</b>
+          <div class="net-support-will-container">
+              <span class="net-support-will-container1">
+                  <p class="net-support-will">Net Support will assist you shortly.</p>
+                  <p class="net-support-will">Please check your inbox.</p>
+              </span>
+          </div>
+      </div>
+      <div class="bottom">
+          <div><a href="{{ url_for('routes.login') }}"><img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="logo2"></a></div>
+          <div class="kw-international">© KW International Inc All rights reserved.</div>
+      </div>
+  </div>
+</body>
+
+</html>

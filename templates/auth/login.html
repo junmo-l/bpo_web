@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="logo">
+        <form method="POST" action="{{ url_for('routes.login') }}">
+            <div class="input-container">
+                <img src="{{ url_for('static', filename='images/PERSON.png') }}" alt="Username" class="input-icon">
+                <input type="text" id="username" name="username" placeholder="Username" class="input-field">
+            </div>
+            <div class="input-container">
+                <img src="{{ url_for('static', filename='images/Lock.png') }}" alt="Password" class="input-icon">
+                <input type="password" id="password" name="password" placeholder="Password" class="input-field">
+                <img src="{{ url_for('static', filename='images/Eye.png') }}" alt="Password" class="password-icon" style="position: absolute; right: -65px; top: 50%; transform: translateY(-50%);">
+            </div>
+            <!-- <div class="stay-signed-in">
+                <img id="loginCheck" src="{{ url_for('static', filename='images/check.png') }}" alt="sign" class="login-check">
+                <img id="loginCheck2" src="{{ url_for('static', filename='images/check2.png') }}" alt="sign" class="login-check hidden">
+                <label for="staySignedIn"> Stay Signed in</label>
+            </div> -->
+
+            <div class="error-message-container">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <div class="error-message" style="color: red;">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+
+            <button type="submit" class="submit-button">Sign in</button>
+            <div class="additional-links">
+                <a class="forgot-password">
+                    <span class="password-underline1">Forgot your</span>
+                    <a href="{{ url_for('routes.forgot_password') }}"><span class="username-underline">Password</a></span> or
+                    <a href="{{ url_for('routes.forgot_username') }}"><span class="username-underline2">Username?</span></a>
+                </a>
+            </div>
+            <div class="kw-international-inc">© KW International Inc All rights reserved.</div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    
+</body>
+
+</html>

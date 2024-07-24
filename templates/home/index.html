@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="EN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KW | Homepage</title>
+    <meta name="description" content="KW Contact Center offers comprehensive and fully tailored services that are specific to your e-commerce business.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/imagehover.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" type="text/css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <header class="header-social">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href=""></a>
+                    <!--
+                    <a href="https://www.facebook.com/KWInternational97/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/KW_Intl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/kwinternational/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-default navbar-kw-bpo navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <i class="fa fa-bars" aria-hidden="true"></i> Menu
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="{{ url_for('static', filename='img/kw-logo.png') }}" class="img-responsive" width="100px" alt="KW Logo.">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right navbar-right-kw">
+                    <li><a href="{{ url_for('routes.about') }}">About Us</a></li>
+                    <li><a data-scroll href="#section-services">Services</a></li>
+                    <li><a data-scroll href="#section-solutions">Our Advantage</a></li>
+                    <li><a href="{{ url_for('routes.login') }}">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home-slider">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            
+            <div class="carousel-inner" role="listbox">
+                <div class="item active slide1">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h1 data-animation="animated bounceInDown">Meet your <span style="color: #00c0ff;">Long Term</span> Outsourcing Partner.</h1>
+                                <a href="contact.aspx" class="btn btn-banner animated bounceInUp">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item slide2">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h1 data-animation="animated bounceInDown">Why Choose Us?</h1>
+                                <a href="index.html#section-solutions" data-scroll class="btn btn-banner animated bounceInUp">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item slide3">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-7 text-left">
+                                <h1 data-animation="animated bounceInDown">Scope of Services</h1>
+                                <a href="index.html#section-services" data-scroll class="btn btn-banner animated bounceInUp">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="section-kw-role">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="kw-section-title text-center">Role of KW</h1>
+                    <div class="title-content text-center">
+                        The KW Contact Center offers comprehensive and fully tailored services that are specific to your business. Our highly experienced staff carefully design and integrate client-specific operation processes that can help reduce costs and further develop your business. Our well-trained agents deliver quality customer service to achieve high rates of customer satisfaction and our system offers seamless connectivity between you and your customers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-role-items">
+                <div class="col-md-4 col-sm-4">
+                    <figure class="imghvr-flip-vert">
+                        <img src="{{ url_for('static', filename='img/Home/Design.jpg') }}" class="img-responsive" alt="Design and integrate.">
+                        <figcaption style="background:#272660;">
+                            <div class="back-icon">
+                                <img src="{{ url_for('static', filename='img/Design_Integrate_white.png') }}" class="img-responsive" alt="Design and integrate white.">
+                            </div>
+                            <div class="back-content">
+                                Client-oriented customized services to support your business
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <figure class="imghvr-flip-vert">
+                        <img src="{{ url_for('static', filename='img/Home/Connectivity.jpg') }}" class="img-responsive" alt="Seamless connectivity.">
+                        <figcaption style="background:#272660;">
+                            <div class="back-icon">
+                                <img src="{{ url_for('static', filename='img/Seamless_connectivity_white.png') }}" class="img-responsive" alt="Seamless connectivity.">
+                            </div>
+                            <div class="back-content">
+                                Fully prepared to serve as a bridge between you and your customers
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <figure class="imghvr-flip-vert">
+                        <img src="{{ url_for('static', filename='img/Home/Goal.jpg') }}" class="img-responsive" alt="Reach your goal.">
+                        <figcaption style="background:#272660;">
+                            <div class="back-icon">
+                                <img src="{{ url_for('static', filename='img/Goal_white.png') }}" class="img-responsive" alt="Reach the goal.">
+                            </div>
+                            <div class="back-content">
+                                Well-designed and integrated operation plans resulting in cost reduction and high customer satisfaction for your business
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-howitworks">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="kw-section-title text-center">How Does It Work ?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="howitwork-vdo">
+                        <iframe width="100%" height="650" src="{{ url_for('static', filename='images/KW ver.mp4') }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-services" id="section-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="kw-section-title text-center">Contact Center Services</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="services-wrapper">
+                            <div class="service-description">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="service1">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Help_desk_white.png') }}" class="img-responsive" alt="Help Desk.">
+                                                <h3><strong>Help Desk</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                Our Help Desk assists customers with various general inquiries including how to navigate the customer portal and providing information about products or services. With their professional attitude and excellent communication skills, our Help Desk agents can support any business by delivering positive customer service.
+                                            </div>
+                                            <div class="item-status">
+                                                INBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="service2">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Tech_support_white.png') }}" class="img-responsive" alt="Tech Support.">
+                                                <h3><strong>Tech Support</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                Our front-line Tech Support Team identifies and analyzes the symptoms of a product and provides a guideline for resolution of the issue. Then our Master Technicians with a deeper knowledge and understanding of the products will back up Field Technicians by investigating elevated issues and efficiently performing the troubleshooting process.
+                                            </div>
+                                            <div class="item-status">
+                                                INBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="service3">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Order_processing_white.png') }}" class="img-responsive" alt="Order processing.">
+                                                <h3><strong>Order Processing</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                We provide comprehensive services for order processing. Depending on our clients’ needs, we can customize our operations so that our agents can accurately take and create orders through multiple different platforms.
+                                            </div>
+                                            <div class="item-status">
+                                                INBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="service4">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Return_processing_white.png') }}" class="img-responsive" alt="Return processing.">
+                                                <h3><strong>Return Processing</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                We specialize in returns processing. Our agents can verify eligibility of product returns based on a given policy, then collect necessary information from the customer in order to conduct RMA processing with the following options:
+                                                <ul>
+                                                    <li>Replacement (Exchange)</li>
+                                                    <li>Refund</li>
+                                                    <li>Repair</li>
+                                                    <li>Refurbishment</li>
+                                                </ul>
+                                            </div>
+                                            <div class="item-status">
+                                                INBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="service5">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Order_tracking_white.png') }}" class="img-responsive" alt="Order Tracking.">
+                                                <h3><strong>Order Tracking</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                Our Order Management Department tracks and follows up with thousands of order statuses on a daily basis. Not only do they focus on tracking orders, they also identify and prevent issues that can possibly cause delay or other negative impacts on operations before they happen.
+                                            </div>
+                                            <div class="item-status">
+                                                OUTBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="service6">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Satifaction_white.png') }}" class="img-responsive" alt="Customer Satisfaction Survey.">
+                                                <h3><strong>Customer Satisfaction Survey</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                We consistently conduct surveys on our clients’ behalf to measure how satisfied their customers are about the products and services provided to them. Feedback given by the customers allow our clients to effectively build a strategy to maintain their customer base and attract new customers as well.
+                                            </div>
+                                            <div class="item-status">
+                                                OUTBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="service7">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Social_network_white.png') }}" class="img-responsive" alt="Social Media Interaction.">
+                                                <h3><strong>Social Media Interaction</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                These days, a large percentage of customers actively utilize social media to express and share personal opinions on the internet. We help our clients become more proactive in interacting with their customers through different social media platforms.
+                                            </div>
+                                            <div class="item-status">
+                                                OUTBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="service8">
+                                        <div class="tab-content-wrapper">
+                                            <div class="tab-icon">
+                                                <img src="{{ url_for('static', filename='img/Notification_white.png') }}" class="img-responsive" alt="Automated Notification.">
+                                                <h3><strong>Automated Notification</strong></h3>
+                                            </div>
+                                            <div class="tab-description">
+                                                Our Automated Notification System is an effective tool for our clients to send out necessary notifications out to their customers. The most common uses for an automated event or time-triggered notification include order confirmation, shipping status or promotional deals provided by the clients.
+                                            </div>
+                                            <div class="item-status">
+                                                OUTBOUND
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-items">
+                                <ul class="nav nav-service" role="tablist">
+                                    <li role="presentation" class="active" href="#service1" aria-controls="service1" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Help_desk.png') }}" class="img-responsive active" alt="Help desk.">
+                                                <img src="{{ url_for('static', filename='img/Help_desk_white.png') }}" class="img-responsive hover" alt="Help Desk White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Help Desk
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service2" aria-controls="service2" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Tech_support.png') }}" class="img-responsive active" alt="Tech Support">
+                                                <img src="{{ url_for('static', filename='img/Tech_support_white.png') }}" class="img-responsive hover" alt="Tech Support White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Tech Support
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service3" aria-controls="service3" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Order_processing.png') }}" class="img-responsive active" alt="Order Processing.">
+                                                <img src="{{ url_for('static', filename='img/Order_processing_white.png') }}" class="img-responsive hover" alt="Order Processing White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Order Processing
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service4" aria-controls="service4" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Return_processing.png') }}" class="img-responsive active" alt="Returns Processing.">
+                                                <img src="{{ url_for('static', filename='img/Return_processing_white.png') }}" class="img-responsive hover" alt="Returns Processing White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Returns Processing
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service5" aria-controls="service5" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Order_tracking.png') }}" class="img-responsive active" alt="Order tracking.">
+                                                <img src="{{ url_for('static', filename='img/Order_tracking_white.png') }}" class="img-responsive hover" alt="Order Tracking White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Order Tracking
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service6" aria-controls="service6" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Satifaction.png') }}" class="img-responsive active" alt="Customer Satisfaction Survey.">
+                                                <img src="{{ url_for('static', filename='img/Satifaction_white.png') }}" class="img-responsive hover" alt="Customer Satisfaction Survey White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Customer Satisfaction Survey
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service7" aria-controls="service7" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Social_network.png') }}" class="img-responsive active" alt="Social Media Interaction.">
+                                                <img src="{{ url_for('static', filename='img/Social_network_white.png') }}" class="img-responsive hover" alt="Social Media Interaction White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Social Media Interaction
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li role="presentation" href="#service8" aria-controls="service8" role="tab" data-toggle="tab">
+                                        <div class="tab-head-wrapper">
+                                            <div class="tab-head-icon">
+                                                <img src="{{ url_for('static', filename='img/Notification.png') }}" class="img-responsive active" alt="Automated Notification.">
+                                                <img src="{{ url_for('static', filename='img/Notification_white.png') }}" class="img-responsive hover" alt="Automated Notification White.">
+                                            </div>
+                                            <div class="tab-desc">
+                                                Automated Notification
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-solutions" id="section-solutions">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="kw-section-title text-center">Our Advantage</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div>
+                            <ul class="nav nav-solution" role="tablist">
+                                <li role="presentation" class="active tab1"><a href="#solution1" aria-controls="home" role="tab" data-toggle="tab">
+                                        Experienced Leadership
+                                    </a></li>
+                                <li role="presentation" class="tab2"><a href="#solution2" aria-controls="profile" role="tab" data-toggle="tab">
+                                        Highly Trained Agents
+                                    </a></li>
+                                <li role="presentation" class="tab3"><a href="#solution3" aria-controls="messages" role="tab" data-toggle="tab">
+                                        Automatic Call System
+                                    </a></li>
+                                <li role="presentation" class="tab4"><a href="#solution4" aria-controls="settings" role="tab" data-toggle="tab">
+                                        Multilanguage
+                                    </a></li>
+                                <li role="presentation" class="tab5"><a href="#solution5" aria-controls="settings" role="tab" data-toggle="tab">
+                                        Omnichannel
+                                    </a></li>
+                                <li role="presentation" class="tab6"><a href="#solution6" aria-controls="settings" role="tab" data-toggle="tab">
+                                        Quality Assurance (QA)
+                                    </a></li>
+                            </ul>
+                            <div class="tab-content clear-both">
+                                <div role="tabpanel" class="tab-pane fade in active" id="solution1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Experienced Leadership</strong></h3>
+                                                    <hr> KW has been offering BPO and call center services to a major electronics manufacturer for almost 10 years. With a deep knowledge and understanding accumulated from many years of experience in the industry, KW is profoundly experienced at designing and implementing efficient operation plans specific for your business. In addition, KW consistently manages and monitors agents to assure quality services, by which our clients can earn brand loyalty from customers.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/Experience.jpg') }}" class="img-responsive tab-content-img" alt="Experience Leadership.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="solution2">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Highly Trained Agents</strong></h3>
+                                                    <hr> Our contact agents will be the front-line representatives of your business. That’s why KW puts a huge emphasis on training agents. Trainers are selected based on their high performance, leadership, and communication skills. They provide training sessions through different forms including lecture, Q&amp;A session, self-training, shadowing and comprehensive exams. We believe that a successful operation can only start from perfectly prepared agents ready to deliver utmost satisfaction to clients’ customers.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/Trained-Agents.jpg') }}" class="img-responsive tab-content-img" alt="Experience Leadership.">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="solution3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Automatic Call System</strong></h3>
+                                                    <hr> Our Automatic Call System significantly increases productivity of the entire operation and also prevents human error. KW is equipped with all the necessary common call systems including ACD, IVR, auto-dialer and other related features. Moreover, our internal IT department allows our contact center to proactively adapt to changes in the industry’s technologies.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/Automatic-System.jpg') }}" class="img-responsive tab-content-img" alt="Automatic Call System.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="solution4">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Multilanguage</strong></h3>
+                                                    <hr> KW consists of agents from diverse backgrounds. Currently, our multilingual capabilities are mostly comprised of English and Spanish speakers. However, we are also capable of communicating in other languages as well including Korean, Japanese, Mandarin, Cantonese, Khmer and Tagalog.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/multilingual.jpg') }}" class="img-responsive tab-content-img" alt="Multilingual.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="solution5">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Omnichannel</strong></h3>
+                                                    <p>KW offers contact center service through all the available channels in the industry. Please check below for the channels we provide:</p>
+                                                    <ul>
+                                                        <li>Telephone</li>
+                                                        <li>Email</li>
+                                                        <li>Live Chat</li>
+                                                        <li>Social Media</li>
+                                                        <li>Text (SMS)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/omnichannel(2).png') }}" class="img-responsive tab-content-img" alt="Omnichannel.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="solution6">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="tab-content-wrapper">
+                                                    <h3><strong>Quality Assurance (QA)</strong></h3>
+                                                    <hr>
+                                                    <h5><strong>Monitoring</strong></h5>
+                                                    <p>KW offers a cloud-based analytic tool which allows clients to remotely monitor our real-time dashboard from anywhere in the world. Our supervisors also monitor the calls between customers and agents to ensure a high level of quality service.</p>
+                                                    <h5><strong>Reporting</strong></h5>
+                                                    <p>KW’s Data team provides customized reports specifically for our client’s business. Types of reports provided by KW include, but not limited to:</p>
+                                                    <ul>
+                                                        <li>Call Data</li>
+                                                        <li>Performance</li>
+                                                        <li>Issue Identification</li>
+                                                        <li>Customer Feedback</li>
+                                                        <li>Forecast</li>
+                                                        <li>KPI</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img src="{{ url_for('static', filename='img/Solutions/QA-2.jpg') }}" class="img-responsive tab-content-img" alt="Quality Assurance.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-howto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>How can we help you?</h1>
+                    <p>Contact us now to request a quote or personal consultation.
+                        <br>Our CSR representative will get back to you immediately and discuss more in detail to bring your success!</p>
+                </div>
+            </div>
+            <div class="row row-howto-contact">
+                <div class="col-md-6 col-sm-6 bar">
+                    <h5><strong>EMAIL</strong><br>bpocsr@kwinternational.com</h5>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <!-- <a href="contact.aspx"><strong>REQUEST</strong><br>FOR QUOTE</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <div class="footer-logo">
+                        <!-- <img src="/static/img/kw-logo-white.png" class="img-responsive" alt="Footer logo."> -->
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <ul class="footer-nav">
+                        <!--
+                        <li><a data-scroll href="index.html#section-solutions">Our Advantage</a></li>
+                        <li><a data-scroll href="index.html#section-services">Services</a></li>
+                        <li><a href="contact.aspx">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.aspx" class="btn-quote">Request Quote</a></li>
+                        -->
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="footer-social">
+                        <!--
+                        <a href="https://www.facebook.com/KWInternational97/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/KW_Intl"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/kwinternational/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">
+                        KW International Inc © 2017 All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/jquery-1.12.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr-2.8.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            smoothScroll.init();
+
+            function doAnimations(elems) {
+                var animEndEv = 'webkitAnimationEnd animationend';
+                elems.each(function() {
+                    var $this = $(this),
+                        $animationType = $this.data('animation');
+                    $this.addClass($animationType).one(animEndEv, function() {
+                        $this.removeClass($animationType);
+                    });
+                });
+            }
+
+            var $myCarousel = $('#carousel-example-generic'),
+                $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+
+            $myCarousel.carousel();
+            doAnimations($firstAnimatingElems);
+            $myCarousel.carousel('pause');
+
+            $myCarousel.on('slide.bs.carousel', function(e) {
+                var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+                doAnimations($animatingElems);
+            });
+            $('#carousel-example-generic').carousel({
+                interval: 3000,
+                pause: "false"
+            });
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 50) {
+                    $('.navbar-kw-bpo').addClass('sticky');
+                } else {
+                    $('.navbar-kw-bpo').removeClass('sticky');
+                }
+            });
+        });
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-104736640-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

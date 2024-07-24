@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recall.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <div class="samsung-page-submit-white">
+        <img class="main-banner-1-icon" alt="Main Banner" src="{{ url_for('static', filename='images/main_banner.png') }}">
+        <div class="overlay"></div>
+        <img class="samsung-orig-wordmark-white-rg-icon" alt="Samsung Logo" src="{{ url_for('static', filename='images/Samsung_logo.png') }}">
+
+        <div class="we-are-ready">WE ARE READY TO HELP</div>
+        <div class="providing-next-level">Providing next level customer service experience</div>
+        <div class="product-no">
+            Product No. 
+            <input type="text" class="hidden-input1" placeholder="Product No." onblur="changeColor(this)">
+        </div>
+        <div class="serial-no">
+            Serial No. 
+            <input type="text" class="hidden-input2" placeholder="Serial No." onblur="changeColor(this)">
+        </div>
+        <div class="last-name">
+            Last Name 
+            <input type="text" class="hidden-input3" placeholder="Last Name" onblur="changeColor(this)">
+        </div>
+        <img class="samsung-page-submit-white-child" alt="Vector 1" src="{{ url_for('static', filename='images/Vector.png') }}">
+        <img class="samsung-page-submit-white-item" alt="Vector 2" src="{{ url_for('static', filename='images/Vector.png') }}">
+        <img class="samsung-page-submit-white-inner" alt="Vector 3" src="{{ url_for('static', filename='images/Vector.png') }}">
+        <img class="vector-icon" alt="Vector 4" src="{{ url_for('static', filename='images/Vector 58.png') }}">
+        <img class="vector-icon2" alt="Vector 5" src="{{ url_for('static', filename='images/Vector 58.png') }}">
+        <img class="vector-icon3" alt="Vector 6" src="{{ url_for('static', filename='images/Vector 58.png') }}">
+        <div class="rectangle-div">
+        <div class="submit">Submit</div>
+    </div>
+    <div class="search-icon-container">
+        <img class="search-outline-icon" alt="Search Icon" src="{{ url_for('static', filename='images/search-outline.png') }}" id="searchIcon">
+    </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/recall.js') }}"></script>
+</body>
+</html>

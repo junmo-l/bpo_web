@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/welcome.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+
+    <title>Welcome !!</title>
+</head>
+
+<body>
+    <div class="rectangle-div">
+        <div class="container">
+            <div class="gpca-logistics-trend-parent">
+                <div class="dashboard">Dashboard</div>
+                <div class="line-div"></div>
+                {% if 1 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.allWhTrend') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>ALL WH Trend</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 2 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.arap') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>AR AP</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 3 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.cuchen') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>Cuchen</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 4 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.gpcaLogisticsTrend') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>GPCA Logistics Trend</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 5 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.gpcaLogisticsTrendITBO') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>GPCA Logistics Trend (IT, BO)</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 6 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.pendingTickets') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>KPI - NCP, STP, ENR</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 7 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.sto') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>STO</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if 8 in dashboard_ids %}
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.recall') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>Recall</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            <div class="gpca-logistics-trend-parent2">
+                {% if 'master' in permissions %}
+                <div class="workspace">Workspace</div>
+                <div class="line-div2"></div>
+                <div class="gpca-logistics-trend">
+                    <a href="{{ url_for('routes.userlist') }}">
+                        <div class="gpca-logistics-trend1">
+                            <span>Management</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bottom">
+            <div><a href="{{ url_for('routes.logout') }}"><img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="kw-logo-2-icon"></a></div>
+            <div class="kw-international-inc">© KW International Inc All rights reserved.</div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/welcome.js') }}"></script>
+
+</body>
+
+</html>

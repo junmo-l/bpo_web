@@ -1,0 +1,183 @@
+{% extends "base/baseManagement.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}" />
+{% endblock %}
+
+{% block content %}
+<div class="users-edit-closed">
+    <div class="users-edit-closed-child"></div>
+    <a href="{{ url_for('routes.welcome') }}">
+        <img class="users-logo" alt="" src="{{ url_for('static', filename='images/kw-logo 2.png') }}" id="kwLogo2Image">
+    </a>
+    <div class="users-management">Management</div>
+    <div class="base-table-simple-sorting-parent">
+        <div class="base-table-simple-sorting">
+            <div class="row-parent">
+                <div class="user-info-title-row" id="fullname-parent">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title" id="fullname">{{selected_user.first_name}} {{selected_user.last_name}}</div>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Username</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="username-input" value="{{selected_user.username}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row" id="password-row" style="display: none;">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Password</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="password-input" value="{{selected_user.password}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Last Access</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <div class="user-info-value no-edit" id="last-attempt-time">{{selected_user.last_attempt_time}}</div>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">First Name</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="first-name-input" value="{{selected_user.first_name}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Last Name</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="last-name-input" value="{{selected_user.last_name}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Department</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="department-input" value="{{selected_user.department_name}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Location</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <input type="text" class="user-info-value" id="location-input" value="{{selected_user.location}}" autocomplete='off' disabled>
+                    </div>
+                </div>
+                <div class="user-info-title-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="user-info-title">Authority</div>
+                    </div>
+                    <div class="user-info-value-wrapper">
+                        <select id="authority-select" class="user-info-value" disabled>
+                            <option class="user-info-value" value="master" {% for authority in selected_user.authorities %}{% if authority.authority_name == 'master' %}selected{% endif %}{% endfor %}>Master</option>
+                            <option class="user-info-value" value="viewer" {% for authority in selected_user.authorities %}{% if authority.authority_name == 'viewer' %}selected{% endif %}{% endfor %}>Viewer</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- 대시보드리스트 -->
+                <div class="user-info-dashboard-row">
+                    <div class="user-info-title-wrapper">
+                        <div class="dashboard-list">Dashboard List</div>
+                    </div>
+                    <div class="row-inner" id="dashboard-list-container">
+                        <div class="frame-parent">
+                            {% for dashboard in selected_user_dashboard_names %}
+                            <div class="check-box-parent">
+                                <div class="check-box">
+                                </div>
+                                <div class="dashboard-value">{{dashboard}}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 상단네비 -->
+            <div class="frame-group">
+                <div class="top-nav-parent">
+                    <div class="top-nav-button-wrapper">
+                        <div class="top-nav-button-line">
+                        </div>
+                    </div>
+                    <div class="top-nav-users-wrapper">
+                        <a href="{{ url_for('routes.users') }}">
+                            <div class="top-nav-users">Users</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-nav-userlist-wrapper">
+                    <div class="top-nav-user-list-wrapper">
+                        <a href="{{ url_for('routes.userlist') }}">
+                            <div class="top-nav-user-list">User List</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-nav-parent">
+                    <div class="top-nav-button-wrapper">
+                        <div class="top-nav-button-line">
+                        </div>
+                    </div>
+                    <!-- 향후 추가 -->
+                    <!-- <div class="top-nav-dashboard-wrapper"> -->
+                        <!-- <div class="top-nav-dashboard">Dashboard</div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- CRUD 버튼 -->
+            <div class="button-container">
+                <img class="button-edit" id="edit-button" alt="" src="{{ url_for('static', filename='images/Edit State = Default.png') }}">
+                <img class="button-add add-from-users" id="add-button" alt="" src="{{ url_for('static', filename='images/Add State = Default.png') }}">
+                <img class="button-delete" id="delete-button" alt="" src="{{ url_for('static', filename='images/Deleted State = Default.png') }}">
+                <img class="button-save" id="save-button" style="display:none;" alt="" src="{{ url_for('static', filename='images/Save State = Default.png') }}">
+                <img class="button-cancel" id="cancel-button" style="display:none;" alt="Cancel" src="{{ url_for('static', filename='images/Back State = Default.png') }}">
+            </div>
+        </div>
+        <!-- <img class="search-icon" alt="" src="{{ url_for('static', filename='images/Magnifier.png') }}"> -->
+    </div>
+    <!-- <div class="search-bar">
+        <div class="search">Search...</div>
+    </div> -->
+</div>
+<input type="hidden" id="current-user-id" value="{{ selected_user.id }}">
+{% endblock %}
+
+{% block additional_js %}
+<script src="{{ url_for('static', filename='js/add.js') }}"></script>
+<script src="{{ url_for('static', filename='js/update.js') }}"></script>
+<script>
+    function getQueryParams() {
+        const params = {};
+        const queryString = window.location.search.substring(1);
+        const regex = /([^&=]+)=([^&]*)/g;
+        let m;
+        while (m = regex.exec(queryString)) {
+            params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+        }
+        return params;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const queryParams = getQueryParams();
+        if (queryParams.add_mode === 'true') {
+            console.log("Add mode detected");
+            // 여기에 add.js의 함수를 호출하여 add 모드로 전환할 수 있습니다.
+            const addButton = document.getElementById("add-button");
+            addButton.click(); // Add 버튼 클릭을 트리거하여 add.js 실행
+        }
+    });
+</script>
+{% endblock %}

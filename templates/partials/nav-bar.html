@@ -1,0 +1,201 @@
+<div id="header">
+    <div class="top">
+        <!-- Logo -->
+        <div id="logo">
+            <a href="{{ url_for('routes.welcome') }}">
+                <span class="image logo"><img src="{{ url_for('static', filename='images/kw-logo.png') }}" alt="" /></span>
+            </a>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <div class="primary-section">
+                {% if 1 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.allWhTrend') }}">
+                                    <div class="placeholder">
+                                        <img class="All_WH_Trend" src="{{ url_for('static', filename='images/dashboard_nav/ALL WH Trend = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 2 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.arap') }}">
+                                    <div class="placeholder">
+                                        <img class="ARAP" src="{{ url_for('static', filename='images/dashboard_nav/ARAP = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 3 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.cuchen') }}">
+                                    <div class="placeholder">
+                                        <img class="Cuchen" src="{{ url_for('static', filename='images/dashboard_nav/Cuchen = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 4 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.gpcaLogisticsTrend') }}">
+                                    <div class="placeholder">
+                                        <img class="GPCA_LT" src="{{ url_for('static', filename='images/dashboard_nav/GPCA LT = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 5 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.gpcaLogisticsTrendITBO') }}">
+                                    <div class="placeholder">
+                                        <img class="GPCA_LT_IT_BO" src="{{ url_for('static', filename='images/dashboard_nav/GPCA LT IT BO = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 6 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.pendingTickets') }}">
+                                    <div class="placeholder">
+                                        <img class="Pending_Tickets" src="{{ url_for('static', filename='images/dashboard_nav/Pending Tickets = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if 7 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.sto') }}">
+                                    <div class="placeholder">
+                                        <img class="STO" src="{{ url_for('static', filename='images/dashboard_nav/STO = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if 8 in dashboard_ids %}
+                <div class="navbar-container">
+                    <div class="navbar-options">
+                        <div class="statedefault-trailing-iconf">
+                            <div class="content">
+                                <a href="{{ url_for('routes.recall') }}">
+                                    <div class="placeholder">
+                                        <img class="Recall" src="{{ url_for('static', filename='images/dashboard_nav/Recall = Default.png') }}">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+
+    <!-- Toggle close -->
+    <img class="group-child" alt="" src="{{ url_for('static', filename='images/dashboard_nav/Sidebar Close Button.png') }}" id="groupImage">
+
+    <!-- Nav-bottom -->
+    <div class="bottom">
+        <div class="last-part">
+            <div class="dashboard">
+                <div class="navbar-options">
+                    <div class="statedefault-trailing-iconf">
+                        <div class="content">
+                            {% if 'master' in permissions %}
+                            <a href="{{ url_for('routes.userlist') }}">
+                                <div class="placeholder">
+                                    <img class="Workspace" src="{{ url_for('static', filename='images/dashboard_nav/Workspace = Default.png') }}">
+                                </div>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="navbar-options">
+                    <div class="statedefault-trailing-iconf">
+                        <div class="content">
+                            <a href="{{ url_for('routes.logout') }}">
+                                <div class="placeholder">
+                                    <img class="Logout" src="{{ url_for('static', filename='images/dashboard_nav/Logout = Default.png') }}">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="display-picture-variants">
+                <div class="display-picture">
+                    <div class="parent">
+                        {% if 'master' in permissions %}
+                        <img class="icon" alt="" src="{{ url_for('static', filename='images/master.png') }}">
+                        {% elif 'viewer' in permissions %}
+                        <img class="icon" alt="" src="{{ url_for('static', filename='images/viewer.png') }}">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="user-parent">
+                <div class="user-name">
+                    {{session_user.first_name}}
+                    {{session_user.last_name}}
+                </div>
+                <div class="user-dept">
+                    {{ session_user.department_name }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

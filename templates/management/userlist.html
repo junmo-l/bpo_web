@@ -1,0 +1,123 @@
+{% extends "base/baseManagement.html" %}
+
+{% block title %}User List{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/userlist.css') }}" />
+{% endblock %}
+
+{% block content %}
+<div class="user-list-closed">
+    <div class="user-list-closed-child">
+    </div>
+    <a href="{{ url_for('routes.welcome') }}">
+        <img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="user-list-logo">
+    </a>
+    <div class="user-list-management">Management</div>
+    <div class="base-table-simple-sorting-parent">
+        <div class="base-table-simple-sorting">
+            <div class="frame-parent">
+                <div class="top-nav-button-container" id="frameContainer">
+                    <div class="top-nav-button-wrapper"></div>
+                    <a href="{{ url_for('routes.users') }}">
+                        <div class="top-nav-users-wrapper">
+                            <div class="top-nav-users">Users</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="top-nav-user-list-wrapper">
+                    <div class="top-nav-user-list">
+                        <a href="{{ url_for('routes.userlist') }}">User List</a>
+                    </div>
+                </div>
+
+                <!-- 향후 dashboard 추가 -->
+                <!-- <div class="top-nav-dashboard-container">
+                    <div class="top-nav-button-wrapper">
+                    </div>
+                    <div class="top-nav-dashboard-wrapper">
+                        <div class="top-nav-dashboard">Dashboard</div>
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="user-list-tabel">
+                <div class="all-check-box-wrapper">
+                    <input type="checkbox" id="all-check-box" class="all-check-box">
+                    <label for="all-check-box" class="all-check-box-child"></label>
+                </div>
+                <div class="username-title-wrapper">
+                    <div class="username-title">Username</div>
+                </div>
+                <div id="authority-title-wrapper" class="authority-title-wrapper">
+                    <div class="authority-title">Authority</div>
+                </div>
+                <div class="group-title-wrapper">
+                    <div class="group-title">Group</div>
+                </div>
+                <div class="last-access-time-title-wrapper">
+                    <div class="last-access-time-title">Last Access Time</div>
+                </div>
+                <div class="dashboard-title-wrapper">
+                    <div class="dashboard-title">Dashboard</div>
+                </div>
+            </div>
+            <div class="base-table-simple-sorting-item">
+            </div>
+            <div class="user-list-roe-parent">
+                {% for user in users %}
+                <div class="user-list-roe" onclick="loadUser('{{ user.username }}')">
+                    <div class="user-list-roe-inner" onclick="event.stopPropagation();">
+                        <input type="checkbox" id="frame-checkbox-{{ user.id }}" class="frame-child" data-user-id="{{ user.id }}">
+                        <label for="frame-checkbox-{{ user.id }}" class="check-box-child"></label>
+                    </div>
+                    <div class="username-value-wrapper">
+                        <div class="username-value">
+                                {{ user.username }} 
+                        </div>
+                        <div class="email-value">{{ user.username }}@kwinternational.com</div>
+                    </div>
+                    <div class="authority-value-wrapper">
+                        <div class="authority-value">{{ user.authorities }}</div>
+                    </div>
+                    <div class="dept-value-wrapper">
+                        <div class="dept-value"> {{ user.department_name }} </div>
+                    </div>
+                    <div class="last-access-time-value-wrapper">
+                        <div class="last-access-time-value">{{ user.last_attempt_time}}</div>
+                    </div>
+                    <div class="dashboard-value-wrapper">
+                        <div class="dashboard-value">
+                            {% for name in user.dashboard_names %}
+                                <span class="dashboard-value-span">{{ name }}</span>
+                                {% if not loop.last %}
+                                    <span class="dashboard-value-separator-span">|</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="button-container">
+                <img class="button-add add-from-userlist" id="add-button" alt="" src="{{ url_for('static', filename='images/Add State = Default.png') }}" onclick="redirectToAddUser()">
+                <img class="button-delete" id="delete-button" alt="" src="{{ url_for('static', filename='images/Deleted State = Default.png') }}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block additional_js %}
+<script src="{{ url_for('static', filename='js/all-check-box.js') }}"></script>
+<script>
+    function loadUser(username) {
+        window.location.href = '/users?username=' + username;
+    }
+
+    function redirectToAddUser() {
+        window.location.href = '/users?add_mode=true&from_userlist=true';
+    }
+</script>
+{% endblock %}

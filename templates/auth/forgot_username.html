@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <a href="{{ url_for('routes.login') }}">
+            <img src="{{ url_for('static', filename='images/kw-logo 2.png') }}" alt="Logo" class="logo">
+        </a>
+        <div class="input-container">
+            <img src="{{ url_for('static', filename='images/PERSON.png') }}" alt="firstname" class="input-icon">
+            <input type="text" id="firstname" name="firstname" placeholder="First Name" class="input-field">
+        </div>
+        <div class="input-container">
+            <img src="{{ url_for('static', filename='images/PERSON.png') }}" alt="lastname" class="input-icon">
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name" class="input-field">
+        </div>
+        <div class="input-container">
+            <img src="{{ url_for('static', filename='images/email.png') }}" alt="Password" class="input-icon">
+            <input type="email" id="Email" name="Email" placeholder="Email (To receive a reply)" class="input-field">
+        </div>
+        <div class="input-container">
+            <img src="{{ url_for('static', filename='images/email.png') }}" alt="Password" class="input-icon">
+            <input type="email" id="confirmemail" name="Email" placeholder="Confirm Email" class="input-field">
+        </div>
+        <div class="input-container">
+            <img src="{{ url_for('static', filename='images/DEPARTMENT.png') }}" alt="Group" class="input-icon">
+            <input type="text" id="Department" name="group" placeholder="Department" class="input-field">
+        </div>
+        <div class="error-message-container2">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="error-message2" style="color: red;">{{ message }}</div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div style=" margin-bottom: 10px"></div>
+        <button type="submit" class="submit-button" onclick="sendRequest2()">Send Request</button>
+        <div class="additional-links">
+            <a href="#" class="forgot-password">
+                <span class="password-underline">Forgot</span>
+                <a href="{{ url_for('routes.forgot_password') }}"><span class="password-underline2">Password?</span></a>
+            </a>
+        </div>
+        <div class="kw-international-inc3">© KW International Inc All rights reserved.</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/send_request(forgotuser).js') }}"></script>
+</body>
+
+</html>
