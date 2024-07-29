@@ -258,7 +258,7 @@ def forgot_password():
             text_body = f"""
             Hello Support Team,
 
-            A user has requested to recover their account information. Here are the details:
+            A user has requested to recover their password information. Here are the details:
 
             User Name: {username}
             First Name: {firstname}
@@ -272,7 +272,7 @@ def forgot_password():
             KW International Support System
             """
             
-            if send_email_with_mailjet('Account Recovery Request', sender_email, [recipient_email], text_body):
+            if send_email_with_mailjet('Password Recovery Request', sender_email, [recipient_email], text_body):
                 return jsonify({'success': True})
             else:
                 return jsonify({'success': False, 'error': 'Failed to send email. Please try again later.'}), 400
@@ -310,9 +310,23 @@ def forgot_username():
             sender_email = "kyeongjun.lee@kwinternational.com"
             recipient_email = "bpocsr@kwinternational.com"
 
-            text_body = f"First Name: {firstname}\nLast Name: {lastname}\nEmail: {email}\nDepartment: {department}"
+            text_body = f"""
+            Hello Support Team,
 
-            if send_email_with_mailjet('Test API', sender_email, [recipient_email], text_body):
+            A user has requested to recover their account information. Here are the details:
+
+            First Name: {firstname}
+            Last Name: {lastname}
+            Email: {email}
+            Department: {department if department else 'N/A'}
+
+            Please take the necessary actions to assist the user.
+
+            Best regards,
+            KW International Support System
+            """
+
+            if send_email_with_mailjet('Account Recovery Request', sender_email, [recipient_email], text_body):
                 return jsonify({'success': True})
             else:
                 return jsonify({'success': False, 'error': 'Failed to send email. Please try again later.'}), 400
